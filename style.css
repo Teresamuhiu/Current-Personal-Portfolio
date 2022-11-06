@@ -1,0 +1,343 @@
+*{
+	
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	/* background-color: #111;  */
+	 background-color: cornflowerblue;  
+	 /* background-color: #0D19A3; */
+	 overflow: hidden;
+	
+	
+}
+
+.salute{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+
+}
+
+.saluteImage{
+	height: 100vh; 
+	width: 90vw;
+}
+
+.saluteTextContainer{
+	flex: 3;
+}
+
+.saluteImageContainer{
+	flex: 1;
+}
+
+.saluteText{
+	color:aliceblue; 
+	font-size: 40vw;
+	cursor: default;
+}
+
+.nameContainer{
+	height: 100vh;
+	/* background-color:#2E1114; */
+	/* background-color: #FF652F; */
+	background-color: rgb(236, 184, 177);
+}
+
+.name{
+	font-size: 15vw;
+	color: aliceblue;
+	cursor: default;
+	text-align: center;
+	line-height: 100vh;
+}
+
+.jobTitleContainer{
+	height: 100vh;
+	background: url("./image/bg1.png");
+
+}
+
+.jobTtleContainer{
+	height: 100vh;
+	background: url("./image/bg2.png");
+	background-color: #0D19A3;
+	
+}
+
+.jobTitle{
+	font-size: 10vw;
+	color: aliceblue;
+	line-height: 100vh;
+	cursor: default;
+}
+
+.projects{
+	display: flex;
+	flex-direction: column;
+	gap: 30vh;
+	padding: 0px 100px;
+
+}
+
+.projectsTitle{
+	font-size: 10vw;
+	color: aliceblue; 
+	/* color: #15DB95; */
+
+}
+
+.project{
+	display: flex;
+	align-items: center;
+	gap: 100px;
+	height: 100vh;
+	overflow: hidden;
+
+}
+
+.project:nth-child(2n){
+	flex-direction: row-reverse;
+}
+
+.phone{
+	width: 300px;
+	height: 600px;
+	position: relative;
+	flex: 1;
+	
+}
+
+.phoneScreen{
+	width: 264px;
+	height: 567px;
+	position: absolute;
+	top: 17px;
+	left: 18px;
+	border-radius: 30px;
+	overflow: scroll;
+
+}
+
+.phoneScreen::-webkit-scrollbar{
+	display: none;
+}
+
+.phoneApp{
+	width: 100%;
+	
+}
+
+.phoneApp2{
+	width: 100%;
+}
+
+.projectDetail{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+
+}
+
+.projectTitle{
+	font-size: 7vw;
+	/* color: rgb(236, 184, 177); */
+	/* color:#F2F2F2; */
+	color: #F79E02;
+}
+
+.projectDescription{
+	font-size: 20px;
+	/* color: rgb(236, 184, 177); */
+	color:#F2F2F2;
+	text-align: justify;
+	line-height: 40px;
+}
+
+.projectButton{
+	padding: 10px 20px;
+	background-color: transparent;
+	border: 2px solid aliceblue;
+	color: aliceblue;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.projectButton::after{
+	content: "View Demo";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	transition: 1s all;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: aliceblue;
+	color: darkblue;
+}
+
+.projectButton:hover.projectButton::after{
+	transform: translateX(100%);
+}
+
+.laptop{
+	width: 600px;
+	height: 379px;
+	flex: 1;
+	position: relative;
+}
+
+.laptopScreen{
+	width: 451px;
+	position: absolute;
+	height: 283px;
+	top: 18px;
+	left: 68px;
+	overflow: scroll;
+	
+}
+
+.laptopScreen::-webkit-scrollbar{
+	display: none;
+}
+
+
+.laptopApp{
+	width: 100%;
+}
+
+.githubContainer{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-around;
+
+}
+
+.githubTitle{
+	font-size: 100px;
+	color: aliceblue; 
+	/* color: #15DB95 */
+
+}
+
+
+.githubChart{
+	width: 820px;
+	text-align: center;
+
+}
+
+.dates{
+	padding: 10px;
+	color: aliceblue;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.boxContainer{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.box{
+	width: 15px;
+	height: 15px;
+	background-color: #171c25;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: 3s all ease;
+}
+
+/* .active{
+	background-color: #F79E02;
+} */
+
+.active:nth-child(4n){
+	background-color: #ff8c00;
+
+}
+
+.githubChart:hover .active:nth-child(2n+1){
+	background-color: #ff8c00;
+	;
+}
+.githubChart:hover .active:nth-child(2n){
+	background-color: #FF5733;
+}
+
+.githubSm{
+	display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+	.projects{
+		padding: 0px 30px;
+		text-align: center;
+	}
+	.project{
+		flex-direction: column;
+		height: max-content;
+	}
+	.project:nth-child(2n){
+		flex-direction: column;
+	}
+
+	.phone,.laptop{
+		transform: none !important;
+	}
+
+	.githubChart{
+		display: none;
+	}
+
+	.githubTitle{
+		text-align: center;
+		font-size: 10vw;
+	}
+
+	.githubSm{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		color: aliceblue;
+		font-size: 30px;
+		text-align: center;
+
+
+	} 
+
+
+
+
+
+}
+
+/* a.button {
+	padding: 10px 20px;
+	background-color: transparent;
+	border: 2px solid aliceblue;
+	color: aliceblue;
+	cursor: pointer;
+	overflow: hidden;
+	text-decoration: none;
+	position: relative;
+}
+ */
+
+
